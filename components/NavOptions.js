@@ -9,17 +9,18 @@ import {
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
 import { Icon } from 'react-native-elements';
+import { useNavigation } from '@react-navigation/core';
 
 const data = [
   {
-    id: '123',
+    id: '890',
     title: 'Get a ride',
     image:
       'https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_485,h_385/f_auto,q_auto/products/carousel/UberX.png',
     screen: 'MapScreen',
   },
   {
-    id: '456',
+    id: '287',
     title: 'Order food',
     image:
       'https://static.vecteezy.com/system/resources/previews/014/069/831/original/motorbike-for-food-delivery-service-online-ordering-concept-png.png',
@@ -28,13 +29,17 @@ const data = [
 ];
 
 const NavOptions = () => {
+  const navigation = useNavigation();
   return (
     <FlatList
       data={data}
       horizontal
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
-        <TouchableOpacity style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(item.screen)}
+          style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
+        >
           <View>
             <Image
               style={{
