@@ -11,7 +11,6 @@ const HomeScreen = () => {
           style={{
             width: 100,
             height: 100,
-            left: -11,
             resizeMode: 'contain',
           }}
           source={{
