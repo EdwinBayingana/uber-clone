@@ -11,31 +11,14 @@ import {
 import tw from 'tailwind-react-native-classnames';
 import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
+import { useSelector } from 'react-redux';
+import { selectTravelTimeInformation } from '../slices/navSlice';
 
 const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
+  const travelTimeInformation = useSelector(selectTravelTimeInformation);
 
-  const ridesData = [
-    {
-      id: 'Uber-X-123',
-      title: 'UberX',
-      multiplier: 1,
-      image: 'https://links.papareact.com/3pn',
-    },
-    {
-      id: 'Uber-XL-456',
-      title: 'Uber XL',
-      multiplier: 1.2,
-      image: 'https://links.papareact.com/5w8',
-    },
-    {
-      id: 'Uber-LUX-789',
-      title: 'Uber LUX',
-      multiplier: 1.75,
-      image: 'https://links.papareact.com/7pf',
-    },
-  ];
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
       <View>
@@ -48,7 +31,9 @@ const RideOptionsCard = () => {
             type="ionicon"
           />
         </TouchableOpacity>
-        <Text style={tw`text-center py-5 text-xl`}>Select a Ride</Text>
+        <Text style={tw`text-center py-5 text-xl`}>
+          Select a Ride - {travelTimeInformation?.distance.text}
+        </Text>
       </View>
 
       <FlatList
@@ -74,21 +59,19 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-8`}>
               <Text style={tw`text-lg font-bold`}>{title}</Text>
-              <Text>Travel time...</Text>
-              {/* <Text>{travelTimeInformation?.duration.text}</Text> */}
+              <Text>{travelTimeInformation?.duration.text}</Text>
             </View>
-            <Text style={tw`text-lg`}>$99</Text>
-            {/* <Text style={tw`text-lg`}>
-              {new Intl.NumberFormat("ee-gh", {
-                currency: "GHS",
-                style: "currency",
+            <Text style={tw`text-lg`}>
+              {new Intl.NumberFormat('en-gbp', {
+                currency: 'GBP',
+                style: 'currency',
               }).format(
                 ((travelTimeInformation?.duration.value || 0) *
                   SURGE_CHARGE_RATE *
                   multiplier) /
-                  100
+                  100,
               )}
-            </Text> */}
+            </Text>
           </TouchableOpacity>
         )}
       />
@@ -108,5 +91,28 @@ const RideOptionsCard = () => {
 };
 
 export default RideOptionsCard;
+
+const SURGE_CHARGE_RATE = 1.5;
+
+const ridesData = [
+  {
+    id: 'Uber-X-123',
+    title: 'UberX',
+    multiplier: 1,
+    image: 'https://links.papareact.com/3pn',
+  },
+  {
+    id: 'Uber-XL-456',
+    title: 'Uber XL',
+    multiplier: 1.2,
+    image: 'https://links.papareact.com/5w8',
+  },
+  {
+    id: 'Uber-LUX-789',
+    title: 'Uber LUX',
+    multiplier: 1.75,
+    image: 'https://links.papareact.com/7pf',
+  },
+];
 
 const styles = StyleSheet.create({});
