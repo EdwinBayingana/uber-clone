@@ -27,10 +27,6 @@ const NavFavourites = ({ NavFavsStyles }) => {
     },
   ];
 
-  //   const dispatch = useDispatch();
-  //   const origin = useSelector(selectOrigin);
-  //   const navigation = useNavigation();
-
   return (
     <FlatList
       style={NavFavsStyles}
