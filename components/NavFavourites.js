@@ -9,7 +9,7 @@ import React from 'react';
 import { Icon } from 'react-native-elements';
 import tw from 'tailwind-react-native-classnames';
 
-const NavFavourites = () => {
+const NavFavourites = ({ NavFavsStyles }) => {
   const favoritesData = [
     {
       id: '1336',
@@ -33,6 +33,7 @@ const NavFavourites = () => {
 
   return (
     <FlatList
+      style={NavFavsStyles}
       data={favoritesData}
       keyExtractor={(item) => item.id}
       ItemSeparatorComponent={() => (
