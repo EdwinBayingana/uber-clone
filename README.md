@@ -20,17 +20,15 @@
 </p>
 
 <div align="center">
+  - Home screen
   <img width="400px" height="800px" style="object-fit: contain" src="https://github.com/EdwinBayingana/uber-clone/assets/108181471/40f24b37-7e9f-428c-a76d-739f07a9a1ff" alt="home-screen-1" />
-  <img width="400px" height="800px" style="object-fit: contain" src="https://github.com/EdwinBayingana/uber-clone/assets/108181471/40f24b37-7e9f-428c-a76d-739f07a9a1ff" alt="home-screen-2" />
    <img width="400px" height="800px" style="object-fit: contain" src="https://github.com/EdwinBayingana/uber-clone/assets/108181471/cd9d0eff-0fe7-445a-bba8-9ec907a56b5d" alt="map-screen-1" />
+  - Map screen
    <img width="400px" height="800px" style="object-fit: contain" src="https://github.com/EdwinBayingana/uber-clone/assets/108181471/93a8f7aa-d28c-4707-9a5f-284c8ee5ca51" alt="map-screen-2" />
-
-
-https://github.com/EdwinBayingana/uber-clone/assets/108181471/16e72e6d-4c84-4b55-954f-383425c8ed7a
-https://github.com/EdwinBayingana/uber-clone/assets/108181471/e6db5176-15d7-4a64-872e-3bfa4879d430
-https://github.com/EdwinBayingana/uber-clone/assets/108181471/240c04f5-d9bf-46d0-999a-46e13025f84b
-
-
+   <img width="400px" height="800px" style="object-fit: contain" src="https://github.com/EdwinBayingana/uber-clone/assets/108181471/16e72e6d-4c84-4b55-954f-383425c8ed7a" alt="map-screen-3" />
+  
+   <img width="400px" height="800px" style="object-fit: contain" src="https://github.com/EdwinBayingana/uber-clone/assets/108181471/e6db5176-15d7-4a64-872e-3bfa4879d430" alt="price-screen-1" />
+   <img width="400px" height="800px" style="object-fit: contain" src="https://github.com/EdwinBayingana/uber-clone/assets/108181471/240c04f5-d9bf-46d0-999a-46e13025f84b" alt="price-screen-2" />
 
 </div>
 
